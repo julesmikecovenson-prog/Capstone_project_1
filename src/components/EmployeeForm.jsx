@@ -33,7 +33,7 @@ const EmployeeForm = ({ onAddEmployee }) => {
       ...prev,
       [name]: value
     }));
-    // Clear error for this field when user starts typing
+    
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -56,7 +56,6 @@ const EmployeeForm = ({ onAddEmployee }) => {
       
       onAddEmployee(newEmployee);
       
-      // Reset form
       setFormData({
         name: '',
         position: '',
